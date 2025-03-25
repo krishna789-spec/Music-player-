@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Music</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Online Music</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for music...">
+            <button onclick="redirectToYouTube()">Search</button>
+        </div>
+        <div class="music-list" id="music-list"></div>
+    </div>
+
+    <div id="player"></div>
+
+    <script src="online-music.js"></script>
+</body>
+
+</html>

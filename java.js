@@ -61,10 +61,28 @@ let music_list = {
 };
 
 let currentSinger = 'singer1';
+let localMusicList = [];
 
 document.addEventListener('DOMContentLoaded', () => {
     generatePlaylist();
 });
+
+function handleLocalSongs(event) {
+    const files = event.target.files;
+    localMusicList = [];
+    for (let i = 0; i < files.length; i++) {
+        localMusicList.push({
+            name: files[i].name,
+            artist: 'Local Artist',
+            music: URL.createObjectURL(files[i]),
+            img: 'image/music.png' // Default image for local songs
+        });
+    }
+    currentSinger = 'local';
+    music_list['local'] = localMusicList;
+    generatePlaylist();
+    loadTrack(0);
+}
 
 function selectSinger(singer) {
     currentSinger = singer;

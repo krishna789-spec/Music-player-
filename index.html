@@ -75,6 +75,15 @@
                    
                 </ul>
             </div>
+            
+            <div class="online-music-button">
+                <button onclick="window.location.href='online-music.html'">Online Music</button>
+            </div>
+
+            <div class="local-songs-button">
+                <button onclick="document.getElementById('local-songs-input').click()">Local Songs</button>
+                <input type="file" id="local-songs-input" accept="audio/*" multiple style="display: none;" onchange="handleLocalSongs(event)">
+            </div>
         </div>
     </div>
     <script src="java.js"></script>
